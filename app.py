@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 
 password = os.getenv("pswdd")
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://xwmmflllryvfuy:ede8d692def70e5bffe7d69ad81cc3413f104ab35e20befebcfac908e6bb7580@ec2-35-153-35-94.compute-1.amazonaws.com:5432/d84u5su3998h8t'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://dcmbutsatefpmy:2aaef3ca28d56133d2934cf03f9718914eee86e52d9084db9d3879ee7a168a90@ec2-54-224-64-114.compute-1.amazonaws.com:5432/detrak1mth1ppd'
 app.config['SQLACHELMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
