@@ -106,6 +106,7 @@ def get_categories():
         categories = boucle(categories)
         return jsonify({
                 'categories': categories,
+                'success': True,
                 'total_categories': len(categories)
                 })
     except:
@@ -173,6 +174,7 @@ def get_livres():
         livres = boucle(livres)
         return jsonify({
                 'livres': livres,
+                'success': True,
                 'total_livres': len(livres)
                 })
     except:
