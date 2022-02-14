@@ -120,7 +120,10 @@ def get_categorie(id):
     if categorie is None:
         abort(404)
     else:
-        return categorie.format()
+        return jsonify({
+                'Categorie': categorie.format(),
+                'success': True,
+                })
    
 
 # We use this route to delete one item of categorie 
@@ -188,7 +191,10 @@ def get_livre(id):
     if livre is None:
         abort(404)
     else:
-        return livre.format()
+        return jsonify({
+                'Livre': livre.format(),
+                'success': True,
+                })
 
 # We use this path or route to delete one item of livre 
 
