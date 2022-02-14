@@ -249,6 +249,19 @@ def get_categorie_livres(id):
                 })
     except:
         abort(400)
+# We use this route to add a new categorie 
+
+@app.route('/categories', methods=['POST'])
+def add_category():
+    body = request.get_json()
+    new_categorie = body['libelle_categorie']
+    category = Categorie(new_categorie)
+    category.insert()
+    return jsonify({
+        'success': True,
+        'Categorie_added': category.format(),
+        'total_categories': Categorie.query.count()
+    })
     
 @app.errorhandler(404)
 def not_found(error):
